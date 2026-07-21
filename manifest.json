@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Synology Audio Station Media Keys",
+  "version": "0.11",
+  "description": "Enables the Previous/Next media keys (Windows System Media Transport Controls) and 1-5 star rating shortcuts for Synology Audio Station.",
+  "icons": {
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://192.168.20.101/audio/*"],
+      "js": ["content.js"],
+      "world": "MAIN",
+      "run_at": "document_start"
+    }
+  ]
+}
